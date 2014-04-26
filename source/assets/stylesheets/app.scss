@@ -1,0 +1,37 @@
+//= require normalize-css/normalize
+
+// @import 'bourbon';
+// @import 'neat';
+// @import 'bitters';
+
+@font-face {
+  font-family: 'Gloriola_Display_Fat';
+  src:
+    url('../fonts/Gloriola_Display_Fat.eot');
+  src:
+    url('../fonts/Gloriola_Display_Fat.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gloriola_Display_Fat.woff') format('woff'),
+    local('☺');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.big, .small {
+  font-family: 'Gloriola_Display_Fat';
+}
+
+.big {
+  font-size: 144px;
+}
+
+.small {
+  font-size: 100px;
+}
+
+body {
+  background-image: url('../images/launch.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 768px;
+  min-height: 1024px;
+}
