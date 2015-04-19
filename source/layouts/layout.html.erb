@@ -2,7 +2,7 @@
 <html>
   <head class="no-js">
     <meta charset="utf-8">
-    <title><%= current_page.data. %></title>
+    <title><%= current_page.data.title %></title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -12,9 +12,40 @@
     <%= stylesheet_link_tag "app" %>
   </head>
   <body>
+
+    <div class="container">
+      <div class="header-wrap">
+        <div class="logo">
+          <a href="/">Žižkov.rb</a>
+        </div>
+        <div class="claim">
+          is coming to repo near you!
+        </div>
+
+        <div class="menu-wrap">
+          <nav>
+            <ul class="main-menu">
+              <li>
+                <a href="#" class="active">Blog</a>
+              </li>
+              <li>
+                <a href="#">Archive</a>
+              </li>
+              <li>
+                <a href="#">About us</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
     <%= yield %>
 
     <%= javascript_include_tag "app" %>
-    <%= partial 'partials/_google_analytics' %>
   </body>
 </html>

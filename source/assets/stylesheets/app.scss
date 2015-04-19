@@ -1,1 +1,72 @@
 //= require normalize-css/normalize
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+  padding-top: 70px;
+  background: url('../images/container-bg.png') no-repeat center top;
+}
+
+.header-wrap {
+  width: 100%;
+  height: 70px;
+  background: url('../images/menu-bg.png') no-repeat center top;
+
+  & > div {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 70px;
+  }
+
+  .logo a{
+    padding: 0 20px;
+    font-size: 48px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .claim {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 90px;
+    color: #fff;
+  }
+}
+
+.menu-wrap {
+  float: right;
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & > li {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      background: url('../images/menu-active.png') no-repeat center top;
+    }
+  }
+}
