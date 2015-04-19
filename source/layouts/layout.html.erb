@@ -45,10 +45,76 @@
           </nav>
         </div>
       </div>
+
+      <div class="content">
+        <%= yield %>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-item dark">
+          <h3>Recent Posts</h3>
+          <ul>
+            <li>
+              <a href="#">Lorem ipsum dolor sit</a>
+            </li>
+            <li>
+              <a href="#">Lorem ipsum dolor sit amet dolor isci guláš</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-item light">
+          <h3>Github Repos</h3>
+          <ul>
+            <li>
+              <a href="#">
+                <div class="headline">aasm</div>
+                Lorem ipsum dolor sit</a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="headline">aasm</div>
+                Lorem ipsum dolor sit amet dolor isci guláš</a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="headline">aasm</div>
+                Lorem ipsum dolor sit</a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="headline">aasm</div>
+                Lorem ipsum dolor sit amet dolor isci guláš</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-item dark">
+          <h3>Žižkov.rb team Twitter feed</h3>
+          <ul>
+            <li>
+              <a href="#">
+                <div class="headline">@retrorubies on Feb 22</div>
+"There is no way to unfreeze a frozen object in Ruby (http://ruby-doc.org/core-2.2.0/Object.html#method-i-freeze …)." Really? What about melting? https://github.com/zizkovrb/melt </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="headline">@retrorubies on Feb 22</div>
+"There is no way to unfreeze a frozen object in Ruby (http://ruby-doc.org/core-2.2.0/Object.html#method-i-freeze …)." Really? What about melting? https://github.com/zizkovrb/melt </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="clearfix">
+        <div class="made">
+          Made with <span class="heart">&hearts;</span> by Žižkov.rb team<br>
+          Designed by Attraco, supported by LastStar
+        </div>
+        <div class="feeds">
+          Github @zizkovrb<br>
+          Twitter @zizkovrb
+        </div>
+      </footer>
+
     </div>
-
-
-    <%= yield %>
 
     <%= javascript_include_tag "app" %>
   </body>
