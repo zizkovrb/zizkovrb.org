@@ -10,6 +10,21 @@ html {
   box-sizing: inherit;
 }
 
+a:link,
+a:visited {
+  color: $main-color;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: $secondary-color;
+}
+
+a[target="_blank"] {
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+}
+
 .clearfix:after {
    content: ".";
    visibility: hidden;
@@ -97,6 +112,7 @@ body {
   display: inline-block;
   width: 790px;
   padding: 30px;
+  vertical-align: top;
 }
 
 /* sidebar */
@@ -104,6 +120,7 @@ body {
   display: inline-block;
   width: 250px;
   margin-left: -4px;
+  vertical-align: top;
 }
 
 .sidebar-item {
@@ -130,6 +147,7 @@ body {
       margin-bottom: 1px;
       font-weight: 400;
       font-size: 14px;
+      border-bottom: none;
       color: #fff;
       text-decoration: none;
       transition: background 0.3s;
