@@ -118,6 +118,21 @@ body {
   vertical-align: top;
 }
 
+/* articles */
+.blog-article {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $main-color;
+
+  .article-info {
+    margin-bottom: 5px;
+  }
+
+  .article-more {
+    margin-top: 15px;
+  }
+}
+
 /* sidebar */
 .sidebar {
   display: inline-block;
