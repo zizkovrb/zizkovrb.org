@@ -162,6 +162,13 @@ body {
       background-color: $secondary-color;
     }
   }
+
+  .prev img {
+    margin: 8px 0 0 5px;
+  }
+  .next img {
+    margin: 8px 5px 0 0;
+  }
 }
 
 /* sidebar */
