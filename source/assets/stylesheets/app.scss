@@ -133,6 +133,16 @@ body {
   }
 }
 
+/* archive */
+.archive-article {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $secondary-color;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
 /* paging */
 
 .paging-wrap {
