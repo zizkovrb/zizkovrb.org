@@ -1,5 +1,4 @@
-//= require normalize-css/normalize
-
+@import 'normalize-css/normalize';
 @import 'helpers.scss';
 @import 'typography.scss';
 @import 'fontello';
@@ -280,5 +279,6 @@ footer {
 
   .feeds {
     float: right;
+    text-align: right;
   }
 }
