@@ -1,91 +1,20 @@
 ---
 title: 'Archive | Žižkov.rb'
+pageable: true
 ---
+
 
 <div class="blog-archive">
   <h1>Blog Archive</h1>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  <article class="archive-article">
-    <h2>
-      <a href="/article-detail/">Refinery 2, episode: New engines</a>
-    </h2>
-    <div class="article-info">
-      <span class="date">Feb 9, 2012</span>
-    </div>
-  </article>
-  
-  <div class="paging-wrap">
-    <div class="paging">
-      <a href="#" class="prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAl0lEQVQoU52SQQqDMBBFnaW1oF6v2t5AL+JOS6+qLiR9AykMommM8DfJf85n8iU7+ZxzN65mEXFHFjk6BCo5H1APuESBQDXGCTUojwKBKswjeqINFYBrcKKPp9DLGxUog6CH3hhb8/cwCHTH/PHxbKpTEIZdp4I6IinqL1vScgx8/TkMrAXQDT+iC7CbrJXroppj3+Jfyb/QpVQLMu1b+AAAAABJRU5ErkJggg==" alt="prev" /></a>
-      <a href="#" class="active">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
-      <a href="#" class="next"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAmElEQVQoU52STQ5AMBCFTSxwVcHORbiBv+thgWW9JxWNVKlJ3qYzX2faeRI8hFJKkEpEZLWVMGkNgDESNVQCnu5Fb+AGYIAywKMJu8AIhQsUQi1UmJ3fwBkAL2A0GuZZ4AOyvtNjz8LfQ6j743HOTmbHs4Rjp/9BxzpsHa9RPUCvz/m1DjqHBuih3McABCttuWN3X53jNPkOsBxUIY9yky4AAAAASUVORK5CYII=" alt="next" /></a>
-    </div>
-  </div>
+
+  <% blog.articles.each do |article| %>
+    <article class="archive-article">
+      <h2>
+        <%= link_to article.title, article %>
+      </h2>
+      <div class="article-info">
+        <span class="date"><%= date(article.date) %></span>
+      </div>
+    </article>
+  <% end %>
 </div>

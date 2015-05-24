@@ -53,12 +53,11 @@
         <div class="sidebar-item dark">
           <h3>Recent Posts</h3>
           <ul>
-            <li>
-              <a href="#">Lorem ipsum dolor sit</a>
-            </li>
-            <li>
-              <a href="#">Lorem ipsum dolor sit amet dolor isci guláš</a>
-            </li>
+            <% blog.articles.first(2).each do |article| %>
+              <li>
+                <%= link_to article.title, article %>
+              </li>
+            <% end %>
           </ul>
         </div>
         <div class="sidebar-item light">

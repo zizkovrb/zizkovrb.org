@@ -1,0 +1,18 @@
+<% wrap_layout(:layout) do %>
+  <article class="blog-article">
+    <div class="article-comments">
+      <h1><%= current_page.data.title %></h1>
+      <div class="article-info">
+        <span class="date"><%= %><%= date(current_article.date) %></span> &nbsp; | &nbsp; <a class="comments" data-disqus-url="<%= current_article.url %>" href="#disqus_thread">0 Comments</a>
+      </div>
+      <div class="article-body">
+        <%= yield %>
+      </div>
+      <div class="article-comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <%= disqus %>
+      </div>
+    </div>
+  </article>
+<% end %>
