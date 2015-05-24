@@ -29,18 +29,10 @@
         <div class="menu-wrap">
           <nav>
             <ul class="main-menu">
-              <li>
-                <a href="/" class="active">Blog</a>
-              </li>
-              <li>
-                <a href="/archive/">Archive</a>
-              </li>
-              <li>
-                <a href="/about-us/">About us</a>
-              </li>
-              <li>
-                <a href="/contact/">Contact</a>
-              </li>
+              <%= link_to_page 'Blog', '/' %>
+              <%= link_to_page 'Archive', '/archive' %>
+              <%= link_to_page 'About us', '/about-us' %>
+              <%= link_to_page 'Contact', '/contact' %>
             </ul>
           </nav>
         </div>
