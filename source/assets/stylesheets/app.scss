@@ -89,6 +89,9 @@ body {
 
   & > li {
     display: inline-block;
+    &.active a {
+      background: url('../images/menu-active.png') no-repeat center top;
+    }
   }
 
   a {
@@ -101,10 +104,6 @@ body {
 
     &:hover {
       text-decoration: underline;
-    }
-
-    &.active {
-      background: url('../images/menu-active.png') no-repeat center top;
     }
   }
 }

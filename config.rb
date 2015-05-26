@@ -51,3 +51,36 @@ configure :build do
   activate :minify_javascript
   activate :gzip, exts: %w(.js .css .html .htm .svg .ttf .otf .woff .eot)
 end
+
+activate :blog do |blog|
+  blog.layout = 'blog'
+  # use first paragraph as article summary
+  blog.summary_generator = -> (article, html, length, ellipsis) do
+    Nokogiri::HTML(html).css('p').first.to_s
+  end
+end
+
+activate :disqus do |d|
+  # Disqus shotname, without '.disqus.com' on the end (default = nil)
+  d.shortname = 'zizkovrb'
+end
+
+helpers do
+  def date(value)
+    value.strftime('%b %e, %Y')
+  end
+
+  def link_to_page(name, url)
+    path = '/' + request.path.gsub('/index.html', '').gsub('index.html', '')
+    current = path == url
+
+    # handle blog /2012/02/09/my-blog urls
+    if url == '/' and path =~ /\/\d{4}\/\d{2}\/\d{2}\/\S+/
+      current = true
+    end
+
+    class_name = current ? ' class="active"' : ''
+
+    "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
+  end
+end
